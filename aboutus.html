@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About Abbie Culinary Arts Academy & Hospitality">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>About Us | Abbie Culinary Arts Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+        .header-area {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        }
+        .main-header-area {
+            padding: 20px 0;
+        }
+        .nav-brand img {
+            height: 60px;
+        }
+        .welcome-area {
+            background: linear-gradient(rgba(42,127,103,0.7),rgba(42,127,103,0.7)), url('img/img/rmc3.jpeg') center/cover no-repeat;
+            color: #fff;
+            padding: 80px 0 40px 0;
+            text-align: center;
+        }
+        .welcome-area h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .welcome-area p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: #2A7F67;
+            color: #fff;
+            border-radius: 30px;
+            padding: 12px 32px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #D00;
+        }
+        .section {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 40px 32px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #2A7F67;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .feature-card h4 {
+            color: #D00;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .about-team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+        .team-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 24px;
+            text-align: center;
+        }
+        .team-card img {
+            width: 100%;
+            max-width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .team-card h3 {
+            margin-bottom: 8px;
+            color: #2A7F67;
+            font-size: 1.2rem;
+        }
+        .team-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 12px;
+        }
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+        }
+        .calendar-table th, .calendar-table td {
+            border: 1px solid #eee;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .calendar-table th {
+            background: #2A7F67;
+            color: #fff;
+        }
+        .contact-info {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .contact-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .footer-area {
+            background: #2A7F67;
+            color: #fff;
+            padding: 24px 0;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-logo img {
+            height: 40px;
+        }
+        .social-info a {
+            color: #fff;
+            margin-right: 12px;
+            font-size: 1.3rem;
+            transition: color 0.2s;
+        }
+        .social-info a:hover {
+            color: #FFC107;
+        }
+        @media (max-width: 700px) {
+            .section { padding: 20px 8px; }
+            .about-features, .about-team, .contact-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="main-header-area">
+            <div class="container">
+                <nav class="classy-navbar justify-content-between" id="alimeNav">
+                    <a class="nav-brand" href="index.html"><img src="img/img/logo.jpg" alt="Abbie Culinary Arts Academy Logo"></a>
+                    <ul id="nav" style="list-style:none;display:flex;gap:24px;margin:0;">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="aboutus.html">About Us</a></li>
+                        <li><a href="prog.html">Programmes</a></li>
+                        <li><a href="gallery.html">Portfolio</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Welcome Area Start -->
+    <section class="welcome-area">
+        <h1>About Abbie Culinary Arts Academy & Hospitality</h1>
+        <p>
+            Abbie Culinary Arts Academy & Hospitality is the most prestigious culinary school in Nigeria, committed to providing the highest standard of culinary education that beats global standard.<br>
+            Our mission is to nurture and equip our students with exceptional culinary skills for a successful career in the global Food Industry.
+        </p>
+        <a href="#about-section" class="btn">Learn More</a>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- About Section -->
+    <div class="section" id="about-section">
+        <div class="section-title">Who We Are</div>
+        <p>
+            Established in 2014, Abbie Culinary Arts Academy & Hospitality is one of the top centres in Nigeria offering international standard, yet affordable culinary education. We have produced food leaders through our well-balanced curriculum embedded with academic, social, entrepreneurial and professional skills.
+        </p>
+        <div class="about-features">
+            <div class="feature-card">
+                <h4>Curriculum</h4>
+                <p>We have the best curriculum in Nigeria, blending classic and modern culinary methods.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Values</h4>
+                <p>Excellence, Passion, Discipline, Professional Ethics and Creativity are our core values.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Affordability</h4>
+                <p>We offer a wide range of courses to suit every need and budget.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Environment</h4>
+                <p>Our learning environment is comfortable and supportive, with individual attention for each student.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Community</h4>
+                <p>We create memories and networking opportunities with other professionals.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Faculty</h4>
+                <p>Our Chef Instructors are professionally trained to always give their best.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Section -->
+    <div class="section">
+        <div class="section-title">2025 Start Dates</div>
+        <table class="calendar-table">
+            <tr>
+                <th>Course Type</th>
+                <th>Start Dates</th>
+            </tr>
+            <tr>
+                <td>Professional Courses</td>
+                <td>8th Jan, 26th Feb, 22nd Apr, 10th Jun, 5th Aug, 23rd Sep, 4th Nov</td>
+            </tr>
+            <tr>
+                <td>Enthusiast Courses</td>
+                <td>8th Jan, 12th Feb, 18th Mar, 6th May, 24th Jun, 29th Jul, 2nd Sep, 7th Oct, 11th Nov</td>
+            </tr>
+        </table>
+        <a class="btn" href="mailto:chefewah@topkraftculinaryacademy.com.ng">Contact Admissions</a>
+    </div>
+
+    <!-- Team Section -->
+    <div class="section">
+        <div class="section-title">Meet Our Team</div>
+        <div class="about-team">
+            <div class="team-card">
+                <img src="img/img/rmc17.jpg" alt="Lesley Abbie">
+                <h3>Lesley Abbie</h3>
+                <p>Founder / Head Chef</p>
+                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.com.ng">Mail</a>
+            </div>
+            <div class="team-card">
+                <img src="img/img/rmc1.jpg" alt="General Manager">
+                <h3>Name of Chef</h3>
+                <p>General Manager / Head Chef</p>
+                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.com.ng">Mail</a>
+            </div>
+            <div class="team-card">
+                <img src="img/img/rmclizzo.jpg" alt="Student Affairs">
+                <h3>Name of Chef</h3>
+                <p>Head, Student Affairs</p>
+                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.com.ng">Mail</a>
+            </div>
+            <div class="team-card">
+                <img src="img/img/rmc7.jpg" alt="Public Relations">
+                <h3>Name of Chef</h3>
+                <p>Public Relations Officer</p>
+                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.org.ng">Mail</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section">
+        <div class="section-title">Contact Us</div>
+        <div class="contact-info">
+            <div class="contact-card">
+                <h4>Email</h4>
+                <a href="mailto:info@abbie.org.ng">info@abbie.org.ng</a>
+            </div>
+            <div class="contact-card">
+                <h4>Call Us</h4>
+                <a href="tel:+2348037984012">+2348037984012</a>
+                <p>Mon-Fri: 9am – 5pm<br>Sat: 10am – 4pm</p>
+            </div>
+            <div class="contact-card">
+                <h4>Visit Us</h4>
+                <p>62, Rumuevorlu off Miniorlu by Adageorge,<br>Port Harcourt, Rivers State, Nigeria</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copywrite-text">
+                    <p>&copy; <script>document.write(new Date().getFullYear());</script> Abbie Culinary Arts Academy & Hospitality | Powered by <a href="https://embeddet.github.io/MyCV/" target="_blank" style="color:#FFC107;">EmbEddet Systems</a></p>
+                </div>
+                <div class="footer-logo">
+                    <a href="#"><img src="img/img/logo.jpg" alt="Logo"></a>
+                </div>
+                <div class="social-info">
+                    <a href="https://www.facebook.com/topkraftculinaryacademy"><i class="ti-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.twitter.com/topkraftCA"><i class="ti-twitter-alt" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/topkraftculinaryacademy"><i class="ti-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/topkraft_culinary_academy"><i class="ti-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/alime.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+
+</body>
+
+</html>
