@@ -8,72 +8,210 @@
     <title>About Us | Abbie Culinary Arts Academy</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Update the CSS color variables to match home page */
+        :root {
+            --primary-color: #D00;
+            --secondary-color: #2A7F67;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --accent-color: #FFC107;
+        }
+
         body {
             font-family: 'Raleway', sans-serif;
-            background: #f8f9fa;
-            color: #333;
+            background: var(--light-color);
+            color: var(--dark-color);
         }
+
         .header-area {
             background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0; /* Move to very top */
         }
+
         .main-header-area {
-            padding: 20px 0;
+            padding: 15px 5%; /* Match home page padding */
+            max-width: 1200px;
+            margin: 0 auto;
         }
+
+        .classy-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .nav-brand img {
-            height: 60px;
+            height: 60px; /* Match home page logo size */
         }
+
+        #nav {
+            list-style: none;
+            display: flex;
+            gap: 30px; /* Match home page spacing */
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav li {
+            margin: 0;
+        }
+
+        #nav a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem; /* Match home page font size */
+            transition: color 0.3s;
+            padding: 10px 0; /* Add padding for better click area */
+        }
+
+        #nav a:hover,
+        #nav .active a {
+            color: var(--primary-color);
+        }
+
         .welcome-area {
-            background: linear-gradient(rgba(42,127,103,0.7),rgba(42,127,103,0.7)), url('img/img/rmc3.jpeg') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(208,0,0,0.85) 0%, rgba(42,127,103,0.85) 100%), url('img/img/rmc3.jpeg') center/cover no-repeat fixed;
             color: #fff;
-            padding: 80px 0 40px 0;
+            padding: 160px 0 80px 0;
             text-align: center;
+            margin-top: 0;
+            position: relative;
+            overflow: hidden;
         }
+
+        .welcome-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+
+        .welcome-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         .welcome-area h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            font-size: 3.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+            line-height: 1.2;
+            animation: fadeInUp 1s ease-out;
         }
-        .welcome-area p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        .btn {
-            background: #2A7F67;
-            color: #fff;
-            border-radius: 30px;
-            padding: 12px 32px;
+
+        .welcome-area .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: var(--accent-color);
             text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .welcome-area p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            font-weight: 400;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, var(--primary-color), #ff1744);
+            color: #fff;
+            border-radius: 50px;
+            padding: 16px 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
             border: none;
-            transition: background 0.3s;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(208, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.9s both;
+            position: relative;
+            overflow: hidden;
         }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
         .btn:hover {
-            background: #D00;
+            background: linear-gradient(45deg, var(--secondary-color), #00695c);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(42, 127, 103, 0.4);
         }
+
         .section {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto;
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             padding: 40px 32px;
         }
+
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: #2A7F67;
-            margin-bottom: 18px;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
             text-align: center;
+            position: relative;
         }
+
+        .section-title:after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
         .about-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
             margin: 32px 0;
         }
+
         .feature-card {
             background: #f8f9fa;
             border-radius: 10px;
@@ -81,17 +219,20 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             text-align: center;
         }
+
         .feature-card h4 {
-            color: #D00;
+            color: var(--primary-color);
             margin-bottom: 10px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
+
         .about-team {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 32px;
             margin-top: 32px;
         }
+
         .team-card {
             background: #fff;
             border-radius: 10px;
@@ -99,6 +240,7 @@
             padding: 24px;
             text-align: center;
         }
+
         .team-card img {
             width: 100%;
             max-width: 220px;
@@ -108,70 +250,150 @@
             margin-bottom: 16px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
+
         .team-card h3 {
             margin-bottom: 8px;
-            color: #2A7F67;
-            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-size: 1.3rem;
         }
+
         .team-card p {
             font-size: 1rem;
             color: #555;
             margin-bottom: 12px;
         }
+
         .calendar-table {
             width: 100%;
             border-collapse: collapse;
             margin: 24px 0;
         }
+
         .calendar-table th, .calendar-table td {
             border: 1px solid #eee;
             padding: 10px 14px;
             text-align: left;
         }
+
         .calendar-table th {
-            background: #2A7F67;
+            background: var(--secondary-color);
             color: #fff;
         }
+
         .contact-info {
             margin-top: 32px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
         }
+
         .contact-card {
             background: #f8f9fa;
             border-radius: 10px;
             padding: 18px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
+
+        .contact-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-color);
+        }
+
         .footer-area {
-            background: #2A7F67;
+            background: var(--secondary-color);
             color: #fff;
-            padding: 24px 0;
+            padding: 30px 0;
             margin-top: 40px;
         }
+
         .footer-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
+
         .footer-logo img {
             height: 40px;
         }
+
         .social-info a {
             color: #fff;
             margin-right: 12px;
             font-size: 1.3rem;
             transition: color 0.2s;
         }
+
         .social-info a:hover {
-            color: #FFC107;
+            color: var(--accent-color);
         }
+
         @media (max-width: 700px) {
             .section { padding: 20px 8px; }
             .about-features, .about-team, .contact-info { grid-template-columns: 1fr; }
         }
+
+        /* Add responsive design for mobile */
+        @media (max-width: 768px) {
+    .main-header-area {
+        padding: 10px 3%;
+    }
+    
+    #nav {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .nav-brand img {
+        height: 50px;
+    }
+    
+    .welcome-area {
+        padding: 140px 0 60px 0;
+    }
+    
+    .welcome-area h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .welcome-area .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .welcome-area p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .btn {
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-area h1 {
+        font-size: 2rem;
+    }
+    
+    .welcome-area .subtitle {
+        font-size: 1rem;
+    }
+    
+    .welcome-area p {
+        font-size: 1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -197,12 +419,15 @@
 
     <!-- Welcome Area Start -->
     <section class="welcome-area">
-        <h1>About Abbie Culinary Arts Academy & Hospitality</h1>
-        <p>
-            Abbie Culinary Arts Academy & Hospitality is the most prestigious culinary school in Nigeria, committed to providing the highest standard of culinary education that beats global standard.<br>
-            Our mission is to nurture and equip our students with exceptional culinary skills for a successful career in the global Food Industry.
-        </p>
-        <a href="#about-section" class="btn">Learn More</a>
+        <div class="welcome-content">
+            <div class="subtitle">Nigeria's Premier Culinary School</div>
+            <h1>About Abbie Culinary Arts Academy & Hospitality</h1>
+            <p>
+                Abbie Culinary Arts Academy & Hospitality is the most prestigious culinary school in Nigeria, committed to providing the highest standard of culinary education that beats global standards.<br><br>
+                Our mission is to nurture and equip our students with exceptional culinary skills for a successful career in the global Food Industry.
+            </p>
+            <a href="#about-section" class="btn">Discover Our Story</a>
+        </div>
     </section>
     <!-- Welcome Area End -->
 
@@ -257,7 +482,7 @@
                 <td>8th Jan, 12th Feb, 18th Mar, 6th May, 24th Jun, 29th Jul, 2nd Sep, 7th Oct, 11th Nov</td>
             </tr>
         </table>
-        <a class="btn" href="mailto:chefewah@topkraftculinaryacademy.com.ng">Contact Admissions</a>
+        <a class="btn" href="mailto:leslybaridam5@gmail.com">Contact Admissions</a>
     </div>
 
     <!-- Team Section -->
@@ -268,25 +493,25 @@
                 <img src="img/img/rmc17.jpg" alt="Lesley Abbie">
                 <h3>Lesley Abbie</h3>
                 <p>Founder / Head Chef</p>
-                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.com.ng">Mail</a>
+                <a class="btn" href="mailto:leslybaridam5@gmail.com">Mail</a>
             </div>
             <div class="team-card">
                 <img src="img/img/rmc1.jpg" alt="General Manager">
                 <h3>Name of Chef</h3>
                 <p>General Manager / Head Chef</p>
-                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.com.ng">Mail</a>
+                <a class="btn" href="mailto:leslybaridam5@gmail.com">Mail</a>
             </div>
             <div class="team-card">
                 <img src="img/img/rmclizzo.jpg" alt="Student Affairs">
                 <h3>Name of Chef</h3>
                 <p>Head, Student Affairs</p>
-                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.com.ng">Mail</a>
+                <a class="btn" href="mailto:leslybaridam5@gmail.com">Mail</a>
             </div>
             <div class="team-card">
                 <img src="img/img/rmc7.jpg" alt="Public Relations">
                 <h3>Name of Chef</h3>
                 <p>Public Relations Officer</p>
-                <a class="btn" href="mailto:AbbieCulinaryArtsAcademy&Hospitality.org.ng">Mail</a>
+                <a class="btn" href="mailto:leslybaridam5@gmail.com">Mail</a>
             </div>
         </div>
     </div>
@@ -297,7 +522,7 @@
         <div class="contact-info">
             <div class="contact-card">
                 <h4>Email</h4>
-                <a href="mailto:info@abbie.org.ng">info@abbie.org.ng</a>
+                <a href="mailto:leslybaridam5@gmail.com">leslybaridam5@gmail.com</a>
             </div>
             <div class="contact-card">
                 <h4>Call Us</h4>
